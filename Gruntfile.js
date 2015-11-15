@@ -485,6 +485,11 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
+  grunt.registerTask('deploy', [
+    'build',
+    'buildcontrol'
+  ]);
+
   grunt.registerTask('default', [
     'newer:jshint',
     'newer:jscs',
